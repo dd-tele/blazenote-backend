@@ -9,11 +9,12 @@ import ai from "./routes/ai.route";
 const app = new Hono();
 
 // Define allowed origins
-// Important! No trailing slash
 const allowedOrigins = new Set([
-  "http://localhost:5173",
-  "https://<your-frontend-domain>.<tld>",
+  "http://localhost:5173",                           // Local development
+  "https://blazenote-frontend.ongoing-fighter.sxplab.com>", // Your custom frontend domain
 ]);
+
+// Important! No trailing slash
 
 // https://hono.dev/docs/middleware/builtin/cors
 app.use(
